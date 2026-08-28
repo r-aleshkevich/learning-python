@@ -30,12 +30,12 @@ def analyze_systems(sys_dict):
             max_device = device
 
         if strength < min_strength:
-            max_strength = strength
+            min_strength = strength
             min_device = device
 
     return (max_device, min_device)
 
-worst_sys, best_sys = analyze_systems(systems)
+best_sys, worst_sys = analyze_systems(systems)
 print(f"Лучшая сиcтема: {best_sys}, Худшая система: {worst_sys}")
 
 # Создаем копию systems
